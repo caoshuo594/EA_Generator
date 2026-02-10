@@ -1,0 +1,20 @@
+backtest:
+  deposit: 10000
+  from_date: 2024.06.01
+  leverage: 100
+  period: H1
+  symbol: EURUSD
+  to_date: 2025.12.31
+logging:
+  level: INFO
+mt5:
+  # 设置为 auto 启用自动检测，或指定具体路径
+  auto_detect: true
+  # 以下路径在 auto_detect: true 时作为备用，或在 auto_detect: false 时使用
+  terminal_path: C:\Program Files\XM MT5\terminal64.exe
+  metaeditor_path: C:\Program Files\XM MT5\MetaEditor64.exe
+system:
+  language: zh-CN
+  max_iterations: 3
+  name: AI EA Developer
+  version: 2.0.0

@@ -1,0 +1,256 @@
+instance_configs:
+  '1':
+    discussion_rounds: 1
+    model_roles:
+      coder: google/gemini-3-flash-preview (OpenRouter)
+      coder_enabled: true
+      critic: ''
+      critic_enabled: false
+      fixer: google/gemini-3-flash-preview (OpenRouter)
+      fixer_enabled: true
+      proposer: google/gemini-3-flash-preview (OpenRouter)
+      proposer_enabled: true
+      synthesizer: ''
+      synthesizer_enabled: false
+      unified_model: google/gemini-3-flash-preview (OpenRouter)
+      use_same_model: false
+    mt5:
+      date_from: '2025-01-07'
+      date_to: '2026-01-07'
+      deposit: 10000
+      experts_path: C:\Users\caoshuo\AppData\Roaming\MetaQuotes\Terminal\656C351524AFFE300FAFE576FA4C7845\MQL5\Experts
+      leverage: 30
+      metaeditor_path: C:\Program Files\XM MT5\metaeditor64.exe
+      model: '0'
+      period: M15
+      symbol: EURUSD
+      terminal_path: C:\Program Files\XM MT5\terminal64.exe
+    optimize_rounds: 1
+    optimizer_discussion_rounds: 1
+    requirements: 马丁策略
+  '2':
+    discussion_rounds: 1
+    model_roles:
+      coder: gemini-3-flash (Antigravity Proxy)
+      coder_enabled: true
+      critic: ''
+      critic_enabled: false
+      fixer: gemini-3-flash (Antigravity Proxy)
+      fixer_enabled: true
+      proposer: gemini-3-flash (Antigravity Proxy)
+      proposer_enabled: true
+      synthesizer: ''
+      synthesizer_enabled: false
+      unified_model: gemini-3-flash (Antigravity Proxy)
+      use_same_model: true
+    mt5:
+      date_from: '2025-01-01'
+      date_to: '2026-02-03'
+      deposit: 10000
+      experts_path: ''
+      leverage: 30
+      metaeditor_path: ''
+      model: '0'
+      period: M30
+      symbol: EURUSD
+      terminal_path: ''
+    optimize_rounds: 1
+    optimizer_discussion_rounds: 1
+    requirements: 网格策略
+  '3':
+    discussion_rounds: 1
+    model_roles:
+      coder: deepseek/deepseek-v3.2 (OpenRouter)
+      coder_enabled: true
+      critic: ''
+      critic_enabled: false
+      fixer: deepseek/deepseek-v3.2 (OpenRouter)
+      fixer_enabled: true
+      proposer: deepseek/deepseek-v3.2 (OpenRouter)
+      proposer_enabled: true
+      synthesizer: ''
+      synthesizer_enabled: false
+      unified_model: deepseek/deepseek-v3.2 (OpenRouter)
+      use_same_model: true
+    mt5:
+      date_from: '2025-01-01'
+      date_to: '2026-02-03'
+      deposit: 10000
+      experts_path: ''
+      leverage: 30
+      metaeditor_path: ''
+      model: '0'
+      period: M30
+      symbol: EURUSD
+      terminal_path: ''
+    optimize_rounds: 1
+    optimizer_discussion_rounds: 1
+    requirements: 均线策略
+  '4':
+    discussion_rounds: 1
+    model_roles:
+      coder: gpt-oss-120b (Cerebras)
+      coder_enabled: true
+      critic: ''
+      critic_enabled: false
+      fixer: gpt-oss-120b (Cerebras)
+      fixer_enabled: true
+      proposer: gpt-oss-120b (Cerebras)
+      proposer_enabled: true
+      synthesizer: ''
+      synthesizer_enabled: false
+      unified_model: gpt-oss-120b (Cerebras)
+      use_same_model: true
+    mt5:
+      date_from: '2025-01-01'
+      date_to: '2026-02-03'
+      deposit: 10000
+      experts_path: ''
+      leverage: 30
+      metaeditor_path: ''
+      model: '0'
+      period: H1
+      symbol: EURUSD
+      terminal_path: ''
+    optimize_rounds: 1
+    optimizer_discussion_rounds: 1
+    requirements: 生成网格策略
+  '5':
+    discussion_rounds: 1
+    model_roles:
+      coder: moonshotai/kimi-k2.5 (OpenRouter)
+      coder_enabled: true
+      critic: ''
+      critic_enabled: false
+      fixer: moonshotai/kimi-k2.5 (OpenRouter)
+      fixer_enabled: true
+      proposer: moonshotai/kimi-k2.5 (OpenRouter)
+      proposer_enabled: true
+      synthesizer: ''
+      synthesizer_enabled: false
+      unified_model: moonshotai/kimi-k2.5 (OpenRouter)
+      use_same_model: false
+    mt5:
+      date_from: '2025-01-07'
+      date_to: '2026-02-03'
+      deposit: 10000
+      experts_path: ''
+      leverage: 30
+      metaeditor_path: ''
+      model: '0'
+      period: H1
+      symbol: EURUSD
+      terminal_path: ''
+    optimize_rounds: 1
+    optimizer_discussion_rounds: 1
+    requirements: 生成macd和均线组合策略
+model_roles:
+  coder: glm-4.7 (智谱GLM)
+  coder_enabled: true
+  critic: ''
+  critic_enabled: false
+  fixer: glm-4.7 (智谱GLM)
+  fixer_enabled: true
+  proposer: glm-4.7 (智谱GLM)
+  proposer_enabled: true
+  synthesizer: ''
+  synthesizer_enabled: false
+  unified_model: glm-4.7 (智谱GLM)
+  use_same_model: true
+mt5:
+  date_from: '2025-01-07'
+  date_to: '2026-01-07'
+  deposit: 10000
+  leverage: 30
+  metaeditor_path: C:\Program Files\XM MT5\metaeditor64.exe
+  model: '0'
+  period: M15
+  symbol: EURUSD
+  terminal_path: C:\Program Files\XM MT5\terminal64.exe
+providers:
+- api_key: ""
+  base_url: https://open.bigmodel.cn/api/paas/v4
+  main_model: glm-4.7
+  models:
+  - glm-4.7
+  name: 智谱GLM
+  note: ''
+  template: 智谱GLM
+  website: https://open.bigmodel.cn
+- api_key: ""
+  base_url: http://127.0.0.1:8045/v1
+  main_model: gemini-3-flash
+  models:
+  - gemini-3-flash
+  - gemini-3-pro-high
+  - claude-sonnet-4-5
+  name: Antigravity Proxy
+  note: ''
+  template: Antigravity
+  website: ''
+- api_key: ""
+  base_url: https://openrouter.ai/api/v1
+  main_model: deepseek/deepseek-v3.2
+  models:
+  - moonshotai/kimi-k2.5
+  - z-ai/glm-4.7-flash
+  - minimax/minimax-m2.1
+  - google/gemini-3-flash-preview
+  - deepseek/deepseek-v3.2
+  name: OpenRouter
+  note: ''
+  template: OpenRouter
+  website: https://openrouter.ai
+- api_key: ""
+  base_url: https://api.deepseek.com
+  main_model: deepseek-chat
+  models:
+  - deepseek-chat
+  name: DeepSeek
+  note: ''
+  template: DeepSeek
+  website: https://platform.deepseek.com
+- api_key: ""
+  base_url: https://api-inference.modelscope.cn/v1
+  main_model: ZhipuAI/GLM-4.7-Flash
+  models:
+  - ZhipuAI/GLM-4.7
+  - deepseek-ai/DeepSeek-V3.2
+  - moonshotai/Kimi-K2.5
+  - Qwen/Qwen3-Coder-480B-A35B-Instruct
+  - ZhipuAI/GLM-4.7-Flash
+  name: ModelScope
+  note: ''
+  template: ModelScope
+  website: https://modelscope.cn
+- api_key: ""
+  base_url: https://api.cerebras.ai/v1
+  main_model: zai-glm-4.7
+  models:
+  - gpt-oss-120b
+  - zai-glm-4.7
+  name: Cerebras
+  note: ''
+  template: Cerebras
+  website: https://cloud.cerebras.ai
+- api_key: ""
+  base_url: https://api.groq.com/openai/v1
+  main_model: openai/gpt-oss-120b
+  models:
+  - openai/gpt-oss-120b
+  name: groq
+  note: ''
+  template: 自定义
+  website: ''
+- api_key: ""
+  base_url: https://api.siliconflow.cn/v1
+  main_model: Pro/MiniMaxAI/MiniMax-M2.1
+  models:
+  - Pro/zai-org/GLM-4.7
+  - Pro/deepseek-ai/DeepSeek-V3.2
+  - Pro/MiniMaxAI/MiniMax-M2.1
+  name: 硅基流动 (SiliconFlow)
+  note: ''
+  template: 硅基流动
+  website: https://cloud.siliconflow.cn
+
