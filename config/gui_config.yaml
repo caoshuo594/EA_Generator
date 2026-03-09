@@ -18,7 +18,7 @@ instance_configs:
       date_from: '2025-01-07'
       date_to: '2026-01-07'
       deposit: 10000
-      experts_path: C:\Users\caoshuo\AppData\Roaming\MetaQuotes\Terminal\656C351524AFFE300FAFE576FA4C7845\MQL5\Experts
+      experts_path: ''
       leverage: 30
       metaeditor_path: C:\Program Files\XM MT5\metaeditor64.exe
       model: '0'
