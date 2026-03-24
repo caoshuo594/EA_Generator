@@ -26,7 +26,7 @@ if (Test-Path $zipPath) {
 
 Push-Location $root
 try {
-    & tar -a -c -f $zipName EA_Generator_Client.exe _internal config 启动客户端.bat README.md
+    & tar -a -c -f $zipName EA_Generator_Client.exe config 启动客户端.bat README.md
     if ($LASTEXITCODE -ne 0) {
         throw "打包失败：tar 返回非 0。"
     }
