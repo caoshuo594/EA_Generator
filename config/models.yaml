@@ -1,34 +1,34 @@
 models:
   default:
     coder:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
-      display_name: z-ai/glm-4.7-flash (OpenRouter)
-      model: z-ai/glm-4.7-flash
+      display_name: google/gemini-3-flash-preview (OpenRouter)
+      model: google/gemini-3-flash-preview
       provider: OpenRouter
     critic:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
-      display_name: z-ai/glm-4.7-flash (OpenRouter)
-      model: z-ai/glm-4.7-flash
+      display_name: google/gemini-3-flash-preview (OpenRouter)
+      model: google/gemini-3-flash-preview
       provider: OpenRouter
     fixer:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
-      display_name: z-ai/glm-4.7-flash (OpenRouter)
-      model: z-ai/glm-4.7-flash
+      display_name: google/gemini-3-flash-preview (OpenRouter)
+      model: google/gemini-3-flash-preview
       provider: OpenRouter
     proposer:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
-      display_name: z-ai/glm-4.7-flash (OpenRouter)
-      model: z-ai/glm-4.7-flash
+      display_name: google/gemini-3-flash-preview (OpenRouter)
+      model: google/gemini-3-flash-preview
       provider: OpenRouter
     synthesizer:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
-      display_name: z-ai/glm-4.7-flash (OpenRouter)
-      model: z-ai/glm-4.7-flash
+      display_name: google/gemini-3-flash-preview (OpenRouter)
+      model: google/gemini-3-flash-preview
       provider: OpenRouter
 parameters:
   max_tokens: 4096
@@ -39,26 +39,31 @@ parameters:
     proposer: 0.9
     synthesizer: 0.5
 providers:
-  - api_key: ""
-    base_url: https://openrouter.ai/api/v1
-    main_model: z-ai/glm-4.7-flash
-    models:
-      - z-ai/glm-4.7-flash
-      - google/gemini-2.5-flash
-      - moonshotai/kimi-k2
-      - deepseek/deepseek-chat-v3-0324
-    name: OpenRouter
-    note: 用户首次运行时填写自己的 API Key
-    template: OpenRouter
-    website: https://openrouter.ai
-  - api_key: ""
-    base_url: https://api.siliconflow.cn/v1
-    main_model: Pro/deepseek-ai/DeepSeek-V3.2
-    models:
-      - Pro/deepseek-ai/DeepSeek-V3.2
-      - Pro/zai-org/GLM-4.7
-    name: 硅基流动 (SiliconFlow)
-    note: 用户首次运行时填写自己的 API Key
-    template: 硅基流动
-    website: https://cloud.siliconflow.cn
+- api_key: ''
+  base_url: https://open.bigmodel.cn/api/paas/v4
+  main_model: glm-4.7
+  models:
+  - glm-4.7
+  name: 智谱GLM
+  note: ''
+  template: null
+  website: https://open.bigmodel.cn/
+- api_key: ''
+  base_url: https://api.deepbricks.ai/v1
+  main_model: claude-sonnet-4.5
+  models:
+  - claude-sonnet-4.5
+  name: 自定义配置
+  note: ''
+  template: 自定义
+  website: https://api.deepbricks.ai
+- api_key: ''
+  base_url: https://openrouter.ai/api/v1
+  main_model: google/gemini-3-flash-preview
+  models:
+  - google/gemini-3-flash-preview
+  name: OpenRouter
+  note: ''
+  template: OpenRouter
+  website: https://openrouter.ai
 use_same_model: true

@@ -1,49 +1,50 @@
 instance_configs: {}
 model_roles:
-  coder: z-ai/glm-4.7-flash (OpenRouter)
+  coder: glm-4.7 (智谱GLM)
   coder_enabled: true
-  critic: ""
+  critic: ''
   critic_enabled: false
-  fixer: z-ai/glm-4.7-flash (OpenRouter)
+  fixer: glm-4.7 (智谱GLM)
   fixer_enabled: true
-  proposer: z-ai/glm-4.7-flash (OpenRouter)
+  proposer: glm-4.7 (智谱GLM)
   proposer_enabled: true
-  role_mode: recommended
-  synthesizer: ""
+  synthesizer: ''
   synthesizer_enabled: false
-  unified_model: z-ai/glm-4.7-flash (OpenRouter)
+  unified_model: glm-4.7 (智谱GLM)
   use_same_model: true
 mt5:
-  date_from: "2025-01-01"
-  date_to: "2026-01-01"
+  date_from: '2025-01-07'
+  date_to: '2026-01-07'
   deposit: 10000
-  experts_path: ""
-  leverage: 100
-  metaeditor_path: ""
-  model: "0"
-  period: H1
+  leverage: 30
+  metaeditor_path: ''
+  model: '0'
+  period: M15
   symbol: EURUSD
-  terminal_path: ""
+  terminal_path: ''
 providers:
-  - api_key: ""
-    base_url: https://openrouter.ai/api/v1
-    main_model: z-ai/glm-4.7-flash
-    models:
-      - z-ai/glm-4.7-flash
-      - google/gemini-2.5-flash
-      - moonshotai/kimi-k2
-      - deepseek/deepseek-chat-v3-0324
-    name: OpenRouter
-    note: 用户首次运行时填写自己的 API Key
-    template: OpenRouter
-    website: https://openrouter.ai
-  - api_key: ""
-    base_url: https://api.siliconflow.cn/v1
-    main_model: Pro/deepseek-ai/DeepSeek-V3.2
-    models:
-      - Pro/deepseek-ai/DeepSeek-V3.2
-      - Pro/zai-org/GLM-4.7
-    name: 硅基流动 (SiliconFlow)
-    note: 用户首次运行时填写自己的 API Key
-    template: 硅基流动
-    website: https://cloud.siliconflow.cn
+- api_key: ''
+  base_url: https://openrouter.ai/api/v1
+  main_model: google/gemini-3-flash-preview
+  models:
+  - google/gemini-3-flash-preview
+  - openai/gpt-5.4
+  - openai/gpt-5.3-codex
+  - anthropic/claude-sonnet-4.6
+  - anthropic/claude-opus-4.6
+  name: OpenRouter
+  note: ''
+  template: OpenRouter
+  website: https://openrouter.ai
+- api_key: ''
+  base_url: https://api.siliconflow.cn/v1
+  main_model: Pro/MiniMaxAI/MiniMax-M2.5
+  models:
+  - Pro/MiniMaxAI/MiniMax-M2.5
+  - Pro/zai-org/GLM-5
+  - Pro/moonshotai/Kimi-K2.5
+  - Pro/deepseek-ai/DeepSeek-V3.2
+  name: 硅基流动 (SiliconFlow)
+  note: ''
+  template: 硅基流动
+  website: https://cloud.siliconflow.cn
