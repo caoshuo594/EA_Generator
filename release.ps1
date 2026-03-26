@@ -9,7 +9,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
-    throw "GitHub CLI (gh) 未安装，请先安装后重试。"
+    throw "GitHub CLI (gh) is required."
 }
 
 $tag = if ($Version.StartsWith("v")) { $Version } else { "v$Version" }
@@ -43,7 +43,7 @@ try {
 
     foreach ($item in $packageItems) {
         if (-not (Test-Path $item)) {
-            throw "打包失败：缺少 $item"
+            throw "Packaging failed: missing $item"
         }
 
         Copy-Item -Path $item -Destination $stageDir -Recurse -Force
@@ -55,17 +55,17 @@ try {
     if ($LASTEXITCODE -eq 0) {
         & gh release upload $tag $zipPath --repo $Repo --clobber
         if ($LASTEXITCODE -ne 0) {
-            throw "上传 Release 资产失败。"
+            throw "Release upload failed."
         }
     } else {
         & gh release create $tag $zipPath --repo $Repo --title $releaseTitle --notes $releaseNotes
         if ($LASTEXITCODE -ne 0) {
-            throw "创建 Release 失败。"
+            throw "Release creation failed."
         }
     }
 
-    Write-Host "发布完成：$Repo / $tag"
-    Write-Host "资产文件：$zipPath"
+    Write-Host "Release completed: $Repo / $tag"
+    Write-Host "Asset file: $zipPath"
 }
 finally {
     Pop-Location
