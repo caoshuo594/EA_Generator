@@ -18,13 +18,13 @@ instance_configs:
       date_from: '2025-01-07'
       date_to: '2026-01-07'
       deposit: 10000
-      experts_path: C:\Users\caoshuo\AppData\Roaming\MetaQuotes\Terminal\656C351524AFFE300FAFE576FA4C7845\MQL5\Experts
+      experts_path: ''
       leverage: 30
-      metaeditor_path: C:\Program Files\XM MT5\metaeditor64.exe
+      metaeditor_path: ''
       model: '0'
       period: M15
       symbol: EURUSD
-      terminal_path: C:\Program Files\XM MT5\terminal64.exe
+      terminal_path: ''
     optimize_rounds: 1
     optimizer_discussion_rounds: 1
     requirements: 马丁策略
@@ -162,11 +162,11 @@ mt5:
   date_to: '2026-01-07'
   deposit: 10000
   leverage: 30
-  metaeditor_path: C:\Program Files\XM MT5\metaeditor64.exe
+  metaeditor_path: ''
   model: '0'
   period: M15
   symbol: EURUSD
-  terminal_path: C:\Program Files\XM MT5\terminal64.exe
+  terminal_path: ''
 providers:
 - api_key: ""
   base_url: https://open.bigmodel.cn/api/paas/v4
