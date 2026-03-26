@@ -51,7 +51,7 @@ try {
 
     Compress-Archive -Path (Join-Path $stageDir "*") -DestinationPath $zipPath -Force
 
-    & gh release view $tag --repo $Repo *> $null
+    cmd /c "gh release view $tag --repo $Repo >nul 2>nul"
     if ($LASTEXITCODE -eq 0) {
         & gh release upload $tag $zipPath --repo $Repo --clobber
         if ($LASTEXITCODE -ne 0) {
