@@ -19,17 +19,37 @@ $releaseNotes = if ([string]::IsNullOrWhiteSpace($Notes)) { "Release $tag" } els
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $zipName = "EA_Generator_Client_${tag}_windows_x64.zip"
 $zipPath = Join-Path $root $zipName
+$stageDir = Join-Path $root ".release-staging"
+$packageItems = @(
+    "_internal",
+    "config",
+    "EA_Generator_Client.exe",
+    "start_client.bat",
+    "README.md",
+    "README.txt"
+)
 
 if (Test-Path $zipPath) {
     Remove-Item -Force $zipPath
 }
 
+if (Test-Path $stageDir) {
+    Remove-Item -Recurse -Force $stageDir
+}
+
 Push-Location $root
 try {
-    & tar -a -c -f $zipName _internal config EA_Generator_Client.exe 启动客户端.bat README.md README.txt
-    if ($LASTEXITCODE -ne 0) {
-        throw "打包失败：tar 返回非 0。"
+    New-Item -ItemType Directory -Path $stageDir | Out-Null
+
+    foreach ($item in $packageItems) {
+        if (-not (Test-Path $item)) {
+            throw "打包失败：缺少 $item"
+        }
+
+        Copy-Item -Path $item -Destination $stageDir -Recurse -Force
     }
+
+    Compress-Archive -Path (Join-Path $stageDir "*") -DestinationPath $zipPath -Force
 
     & gh release view $tag --repo $Repo *> $null
     if ($LASTEXITCODE -eq 0) {
@@ -49,4 +69,7 @@ try {
 }
 finally {
     Pop-Location
+    if (Test-Path $stageDir) {
+        Remove-Item -Recurse -Force $stageDir
+    }
 }

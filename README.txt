@@ -3,7 +3,7 @@ EA Generator 客户端发布包 v1.0.5
 
 使用说明
 
-1. 双击“启动客户端.bat”，或直接运行“EA_Generator_Client.exe”。
+1. 双击“start_client.bat”，或直接运行“EA_Generator_Client.exe”。
 2. 程序启动后会自动打开云端界面：
    https://caocaoshuoshuo.com/app
 3. 首次使用请在云端界面中填写你自己的 API Provider、API Key 和模型。
