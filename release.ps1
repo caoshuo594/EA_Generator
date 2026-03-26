@@ -17,7 +17,7 @@ $releaseTitle = if ([string]::IsNullOrWhiteSpace($Title)) { "EA_Generator $tag" 
 $releaseNotes = if ([string]::IsNullOrWhiteSpace($Notes)) { "Release $tag" } else { $Notes }
 
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$zipName = "EA_Generator_Client_EXE_$tag.zip"
+$zipName = "EA_Generator_Client_${tag}_windows_x64.zip"
 $zipPath = Join-Path $root $zipName
 
 if (Test-Path $zipPath) {
@@ -26,14 +26,22 @@ if (Test-Path $zipPath) {
 
 Push-Location $root
 try {
-    & tar -a -c -f $zipName EA_Generator_Client.exe config 启动客户端.bat README.md
+    & tar -a -c -f $zipName _internal config EA_Generator_Client.exe 启动客户端.bat README.md README.txt
     if ($LASTEXITCODE -ne 0) {
         throw "打包失败：tar 返回非 0。"
     }
 
-    & gh release create $tag $zipPath --repo $Repo --title $releaseTitle --notes $releaseNotes
-    if ($LASTEXITCODE -ne 0) {
-        throw "创建 Release 失败。"
+    & gh release view $tag --repo $Repo *> $null
+    if ($LASTEXITCODE -eq 0) {
+        & gh release upload $tag $zipPath --repo $Repo --clobber
+        if ($LASTEXITCODE -ne 0) {
+            throw "上传 Release 资产失败。"
+        }
+    } else {
+        & gh release create $tag $zipPath --repo $Repo --title $releaseTitle --notes $releaseNotes
+        if ($LASTEXITCODE -ne 0) {
+            throw "创建 Release 失败。"
+        }
     }
 
     Write-Host "发布完成：$Repo / $tag"

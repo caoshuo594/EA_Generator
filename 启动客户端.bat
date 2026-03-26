@@ -1,15 +1,15 @@
 @echo off
 chcp 65001 >nul
-title EA Generator Client - Close window to stop
+title EA Generator 客户端 v1.0.5 - 关闭此窗口即可停止服务
 
 echo =====================================================
-echo        EA Generator Client v1.0.4
+echo        EA Generator 客户端发布包 v1.0.5
 echo =====================================================
 echo.
-echo The cloud app will open after the local service starts.
+echo 服务启动后，将自动打开云端界面
 echo   https://caocaoshuoshuo.com/app
 echo.
-echo Close this window or press Ctrl+C to stop the service.
+echo 关闭此窗口或按 Ctrl+C 即可停止服务
 echo =====================================================
 echo.
 
@@ -24,5 +24,5 @@ if exist "EA_Generator_Client.exe" (
 )
 
 echo.
-echo Service stopped.
+echo 服务已停止。
 pause
