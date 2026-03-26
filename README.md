@@ -1,23 +1,26 @@
 # EA_Generator
 
-EA_Generator Windows 客户端发布仓库。
+EA_Generator 客户端发布仓库，包含可直接运行的 Windows 客户端文件。
 
-## 目录说明
+## 文件说明
 
-- `_internal/`: 客户端运行时依赖
-- `config/`: 外置配置目录，默认不包含任何预置 API Key
-- `EA_Generator_Client.exe`: Windows 客户端主程序
-- `start_client.bat`: 一键启动脚本
+- `EA_Generator_Client.exe`：主程序
+- `_internal/`：运行依赖文件夹（必须与 exe 同级）
+- `config/`：配置文件目录
+- `启动客户端.bat`：启动脚本
 
-## 使用方法
+## 快速开始
 
-1. 双击 `start_client.bat`，或直接运行 `EA_Generator_Client.exe`
-2. 程序会自动启动本地服务并打开云端界面：
-   `https://caocaoshuoshuo.com/app`
-3. 首次使用时，请在云端界面填写你自己的 API Provider、API Key 和模型
+1. 进入 Releases 页面下载最新压缩包。
+2. 解压后保持目录结构不变。
+3. 双击 `启动客户端.bat` 或 `EA_Generator_Client.exe` 启动。
 
-## 说明
+## 注意事项
 
-- 发布包不包含任何预置 API Key
-- 发布包不要求额外安装 Python 或第三方依赖库
-- 若自动检测 MT5 失败，可在云端界面或 `config` 目录中填写自己的 MT5 路径
+- 请勿删除 `_internal` 与 `config` 目录。
+- 仓库不包含真实 API Key；请在本地配置。
+- Windows 首次运行可能触发安全提示，请按系统提示允许。
+
+## 版本
+
+- `v1.0.0`（2026-02-10）
