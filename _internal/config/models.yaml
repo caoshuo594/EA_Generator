@@ -1,31 +1,31 @@
 models:
   default:
     coder:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
       display_name: google/gemini-3-flash-preview (OpenRouter)
       model: google/gemini-3-flash-preview
       provider: OpenRouter
     critic:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
       display_name: google/gemini-3-flash-preview (OpenRouter)
       model: google/gemini-3-flash-preview
       provider: OpenRouter
     fixer:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
       display_name: google/gemini-3-flash-preview (OpenRouter)
       model: google/gemini-3-flash-preview
       provider: OpenRouter
     proposer:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
       display_name: google/gemini-3-flash-preview (OpenRouter)
       model: google/gemini-3-flash-preview
       provider: OpenRouter
     synthesizer:
-      api_key: ""
+      api_key: ''
       base_url: https://openrouter.ai/api/v1
       display_name: google/gemini-3-flash-preview (OpenRouter)
       model: google/gemini-3-flash-preview
@@ -39,7 +39,7 @@ parameters:
     proposer: 0.9
     synthesizer: 0.5
 providers:
-- api_key: ""
+- api_key: ''
   base_url: https://open.bigmodel.cn/api/paas/v4
   main_model: glm-4.7
   models:
@@ -48,7 +48,7 @@ providers:
   note: ''
   template: null
   website: https://open.bigmodel.cn/
-- api_key: ""
+- api_key: ''
   base_url: https://api.deepbricks.ai/v1
   main_model: claude-sonnet-4.5
   models:
@@ -57,7 +57,7 @@ providers:
   note: ''
   template: 自定义
   website: https://api.deepbricks.ai
-- api_key: ""
+- api_key: ''
   base_url: https://openrouter.ai/api/v1
   main_model: google/gemini-3-flash-preview
   models:
@@ -67,6 +67,3 @@ providers:
   template: OpenRouter
   website: https://openrouter.ai
 use_same_model: true
-
-
-

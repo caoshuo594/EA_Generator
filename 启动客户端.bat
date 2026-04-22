@@ -1,10 +1,11 @@
 @echo off
-setlocal
+chcp 65001 >nul
 title EA Generator Client
 
-echo =========================================
-echo          EA Generator Client
-echo =========================================
+echo =====================================================
+echo           EA Generator Client
+echo =====================================================
+echo.
 echo Starting local service...
 echo Browser will open automatically.
 echo Press Ctrl+C to stop.
